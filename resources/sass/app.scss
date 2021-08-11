@@ -1,0 +1,233 @@
+// Fonts
+@import url("https://fonts.googleapis.com/css?family=Nunito");
+
+// Variables
+@import "variables";
+
+// Bootstrap
+@import "~bootstrap/scss/bootstrap";
+$white: #ffff;
+$green: #2ea497;
+$background: #ffff;
+$shadow: lightgray;
+$btn-background: #9bd6cf;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+.button-center {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn {
+    background-color: $green;
+    border-radius: 100px;
+    border: 3px solid $green;
+    color: white;
+    width: 300px;
+    padding: 15px 25px;
+    margin-top: 10px;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.1s;
+    &:hover {
+        background-color: $btn-background;
+    }
+}
+
+.fas {
+    width: 10px;
+    color: $green;
+    margin-right: 20px;
+}
+
+body {
+    background-color: #fff !important;
+}
+
+.box {
+    background-color: $white;
+    border-radius: 20px;
+    padding: 15px 20px;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 5px 3px $shadow;
+}
+
+a:hover {
+    text-decoration: none;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+.custom-bg-nav {
+    background: $green;
+}
+
+.profile-picture {
+    width: 250px;
+    height: 250px;
+    min-width: 250px;
+    background-color: $background;
+    border-radius: 50%;
+    border: 5px solid $green;
+    background-position: center;
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover;
+}
+
+.specs {
+    display: flex;
+    flex-wrap: wrap;
+    .badge {
+        background-color: $green;
+        color: $white;
+        font-size: 1rem;
+        text-align: center;
+        padding: 8px 10px;
+        margin-right: 10px;
+        margin-bottom: 5px;
+        margin-top: 5px;
+        border-radius: 5px;
+        letter-spacing: 1px;
+    }
+}
+
+.curriculum,
+.top-name {
+    h2 {
+        position: relative;
+        margin-bottom: 10px;
+        padding-bottom: 10px;
+        &::after {
+            position: absolute;
+            content: "";
+            height: 3px;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: $green;
+            border-radius: 5px;
+        }
+    }
+}
+
+.custom-button {
+    display: inline-block;
+    font-weight: 700;
+    color: $white;
+    text-align: center;
+    vertical-align: middle;
+    user-select: none;
+    border: 1px solid transparent;
+    padding: 5px 10px;
+    margin: 5px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    border-radius: 0.25rem;
+    transition: 0.1s;
+    &:hover {
+        transform: scale(1.05);
+    }
+}
+
+.gray-bg {
+    background-color: rgb(163, 163, 163);
+}
+
+.custom-bg-button {
+    background-color: $green;
+}
+
+.danger {
+    background-color: rgb(255, 46, 46);
+    width: 80%;
+    margin-bottom: 20px;
+}
+
+.image {
+    width: 250px;
+}
+
+.table-messages i {
+    font-size: 20px;
+    padding-left: 10px;
+    margin-left: 10px;
+}
+
+.warning-message {
+    border: 3px solid rgb(255, 46, 46);
+    border-radius: 20px;
+    padding: 20px;
+    width: 98%;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    .fas {
+        color: rgb(255, 46, 46);
+        transform: scale(2);
+        margin-bottom: 10px;
+    }
+    p {
+        font-size: 1.4rem;
+    }
+    .btn {
+        width: 80%;
+        margin: auto;
+        transform: scale(1);
+    }
+}
+
+.sponsorship a {
+    color: black;
+    border: 3px solid #fcc425;
+    border-radius: 20px;
+    padding: 20px;
+    width: 93%;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+    .sponsorship-left {
+        width: 30%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        border-right: 1px solid black;
+    }
+    .sponsorship-right {
+        width: 70%;
+        text-align: center;
+    }
+    .fas {
+        color: #fcc425;
+        transform: scale(3);
+        margin-bottom: 10px;
+    }
+    .fa-lock-open {
+        display: none;
+    }
+    &:hover {
+        color: black;
+        box-shadow: 0 0 5px 3px $shadow;
+        transform: scale(1.05);
+        .fa-lock {
+            display: none;
+        }
+        .fa-lock-open {
+            display: block;
+        }
+    }
+    p {
+        font-size: 1.4rem;
+        margin-bottom: 0;
+    }
+}
